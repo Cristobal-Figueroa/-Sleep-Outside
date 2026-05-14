@@ -1,5 +1,7 @@
 import { getLocalStorage } from "./utils.mjs";
 
+const baseUrl = import.meta.env.BASE_URL;
+
 function renderCartContents() {
   const cartItems = getLocalStorage("so-cart") || [];
   const htmlItems = cartItems.map((item) => cartItemTemplate(item));
@@ -10,7 +12,7 @@ function cartItemTemplate(item) {
   const newItem = `<li class="cart-card divider">
   <a href="#" class="cart-card__image">
     <img
-      src="${item.Image}"
+      src="${baseUrl}${item.Image.replace('../', '')}"
       alt="${item.Name}"
     />
   </a>

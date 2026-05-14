@@ -1,10 +1,12 @@
 import { renderListWithTemplate } from "./utils.mjs";
 
+const baseUrl = import.meta.env.BASE_URL;
+
 function productCardTemplate(product) {
   return `<li class="product-card">
-    <a href="/product_pages/index.html?product=${product.Id}">
+    <a href="${baseUrl}product_pages/index.html?product=${product.Id}">
       <img
-        src="${product.Image}"
+        src="${baseUrl}${product.Image.replace('../', '')}"
         alt="${product.Name}"
       />
       <h3 class="card__brand">${product.Brand.Name}</h3>
