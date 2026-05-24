@@ -3,11 +3,62 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
     <title>Sleep Outside | Home</title>
-    <script type="module" crossorigin src="/-Sleep-Outside/assets/style-HlQJNEhF.js"></script>
+    <style>
+      header nav {
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+      }
+      header nav a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+      }
+      header nav a:hover {
+        background-color: #17b169;
+        color: white;
+      }
+      .category-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        list-style: none;
+        padding: 0;
+        margin: 2rem 0;
+      }
+      .category-list li {
+        text-align: center;
+      }
+      .category-list a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        color: inherit;
+        padding: 2rem;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+      }
+      .category-list a:hover {
+        border-color: #17b169;
+        transform: translateY(-5px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      }
+      .category-list img {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 1rem;
+      }
+      .category-list h3 {
+        margin: 0;
+        font-size: 1.2rem;
+      }
+    </style>
     <link rel="stylesheet" crossorigin href="/-Sleep-Outside/assets/style-C0BBSZZq.css">
   </head>
 
@@ -17,6 +68,12 @@
         <img src="/-Sleep-Outside/images/noun_Tent_2517.svg" alt="tent image for logo" />
         <a href="index.html"> Sleep<span class="highlight">Outside</span></a>
       </div>
+      <nav>
+        <a href="product_listing/index.html?category=tents">Tents</a>
+        <a href="product_listing/index.html?category=backpacks">Backpacks</a>
+        <a href="product_listing/index.html?category=sleeping-bags">Sleeping Bags</a>
+        <a href="product_listing/index.html?category=hammocks">Hammocks</a>
+      </nav>
       <div class="cart">
         <a href="cart/index.html">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
@@ -69,25 +126,25 @@
         <ul class="category-list">
           <li>
             <a href="product_listing/index.html?category=tents">
-              <img src="/-Sleep-Outside/images/noun_Tent_2517.svg" alt="Tents Icon" />
+              <img src="/-Sleep-Outside/images/svg/category-tents.svg" alt="Tents Icon" />
               <h3>Tents</h3>
             </a>
           </li>
           <li>
             <a href="product_listing/index.html?category=backpacks">
-              <img src="/-Sleep-Outside/images/noun_Backpack_2389275.svg" alt="Backpacks Icon" />
+              <img src="/-Sleep-Outside/images/svg/category-backpacks.svg" alt="Backpacks Icon" />
               <h3>Backpacks</h3>
             </a>
           </li>
           <li>
             <a href="product_listing/index.html?category=sleeping-bags">
-              <img src="/-Sleep-Outside/images/noun_Backpack_65884.svg" alt="Sleeping Bags Icon" />
+              <img src="/-Sleep-Outside/images/svg/category-sleepingbags.svg" alt="Sleeping Bags Icon" />
               <h3>Sleeping Bags</h3>
             </a>
           </li>
           <li>
             <a href="product_listing/index.html?category=hammocks">
-              <img src="/-Sleep-Outside/images/noun_Tent_2517.svg" alt="Hammocks Icon" />
+              <img src="/-Sleep-Outside/images/svg/category-hammocks.svg" alt="Hammocks Icon" />
               <h3>Hammocks</h3>
             </a>
           </li>
