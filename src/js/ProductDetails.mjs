@@ -1,7 +1,5 @@
 import { setLocalStorage, getLocalStorage } from "./utils.mjs";
 
-const baseUrl = import.meta.env.BASE_URL;
-
 export default class ProductDetails {
   constructor(productId, dataSource) {
     this.productId = productId;
@@ -28,8 +26,7 @@ export default class ProductDetails {
       this.product.Brand.Name;
     document.getElementById("productName").textContent =
       this.product.NameWithoutBrand;
-    document.getElementById("productImage").src =
-      baseUrl + this.product.Image.replace("../", "");
+    document.getElementById("productImage").src = this.product.Images.PrimaryLarge;
     document.getElementById("productImage").alt = this.product.Name;
     document.getElementById("productFinalPrice").textContent =
       "$" + this.product.FinalPrice;
