@@ -1,9 +1,9 @@
 import { resolve } from "path";
 import { defineConfig } from "vite";
 
-export default defineConfig({
+export default defineConfig(({ command }) => ({
   root: "src/",
-  base: "/-Sleep-Outside/",
+  base: command === 'serve' ? '/' : '/-Sleep-Outside/',
 
   build: {
     outDir: "../dist",
@@ -17,4 +17,4 @@ export default defineConfig({
       },
     },
   },
-});
+}));

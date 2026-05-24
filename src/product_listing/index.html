@@ -3,11 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
     <title>Sleep Outside | Product Listing</title>
     <link rel="stylesheet" href="../css/style.css" />
+    <style>
+      header nav {
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+      }
+      header nav a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+      }
+      header nav a:hover {
+        background-color: #17b169;
+        color: white;
+      }
+    </style>
     <script src="../js/product-listing.js" type="module"></script>
   </head>
 
@@ -17,6 +33,12 @@
         <img src="/images/noun_Tent_2517.svg" alt="tent image for logo" />
         <a href="../index.html"> Sleep<span class="highlight">Outside</span></a>
       </div>
+      <nav>
+        <a href="index.html?category=tents">Tents</a>
+        <a href="index.html?category=backpacks">Backpacks</a>
+        <a href="index.html?category=sleeping-bags">Sleeping Bags</a>
+        <a href="index.html?category=hammocks">Hammocks</a>
+      </nav>
       <div class="cart">
         <a href="../cart/index.html">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
