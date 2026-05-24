@@ -1,7 +1,7 @@
-import{g as t}from"./utils-CGsYQjqr.js";const e="/-Sleep-Outside/";function s(){const r=(t("so-cart")||[]).map(c=>o(c));document.querySelector(".product-list").innerHTML=r.join("")}function o(a){return`<li class="cart-card divider">
+import"./style-HlQJNEhF.js";import{g as t}from"./utils-w_hqdCcP.js";function e(){const r=(t("so-cart")||[]).map(c=>s(c));document.querySelector(".product-list").innerHTML=r.join("")}function s(a){return`<li class="cart-card divider">
   <a href="#" class="cart-card__image">
     <img
-      src="${e}${a.Image.replace("../","")}"
+      src="${a.Images.PrimaryMedium}"
       alt="${a.Name}"
     />
   </a>
@@ -11,4 +11,4 @@ import{g as t}from"./utils-CGsYQjqr.js";const e="/-Sleep-Outside/";function s(){
   <p class="cart-card__color">${a.Colors[0].ColorName}</p>
   <p class="cart-card__quantity">qty: 1</p>
   <p class="cart-card__price">$${a.FinalPrice}</p>
-</li>`}s();
+</li>`}e();

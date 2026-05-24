@@ -1,0 +1,1 @@
+function s(t){return JSON.parse(localStorage.getItem(t))}function i(t,a){localStorage.setItem(t,JSON.stringify(a))}function c(t,a,e,r="afterbegin",n=!1){n&&(a.innerHTML="");const o=e.map(t);a.insertAdjacentHTML(r,o.join(""))}function g(t){const a=window.location.search;return new URLSearchParams(a).get(t)}export{g as a,s as g,c as r,i as s};
