@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sleep Outside | Product Details</title>
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/cart-badge.css" />
     <style>
       header nav {
         display: flex;
@@ -26,6 +27,12 @@
       }
     </style>
     <script src="../js/product.js" type="module"></script>
+    <script type="module">
+      import { updateCartCount } from '../js/utils.mjs';
+      document.addEventListener('DOMContentLoaded', () => {
+        updateCartCount();
+      });
+    </script>
   </head>
 
   <body>
@@ -41,6 +48,7 @@
         <a href="../product_listing/index.html?category=hammocks">Hammocks</a>
       </nav>
       <div class="cart">
+        <span class="cart-count">0</span>
         <a href="../cart/index.html">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
             <path

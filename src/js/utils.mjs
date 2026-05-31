@@ -41,3 +41,14 @@ export function getParam(param) {
   const urlParams = new URLSearchParams(queryString);
   return urlParams.get(param);
 }
+
+export function updateCartCount() {
+  const cart = getLocalStorage("so-cart") || [];
+  const cartCount = cart.length;
+  const badge = document.querySelector(".cart-count");
+  
+  if (badge) {
+    badge.textContent = cartCount;
+    badge.style.display = cartCount > 0 ? "flex" : "none";
+  }
+}
