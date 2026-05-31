@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sleep Outside | Product Listing</title>
+    <title>Sleep Outside | Search Results</title>
     <style>
       header nav {
         display: flex;
@@ -22,8 +22,52 @@
         background-color: #17b169;
         color: white;
       }
+      .search-container {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+        margin-left: auto;
+      }
+      .search-input {
+        padding: 0.5rem 1rem;
+        border: 2px solid #ddd;
+        border-radius: 4px;
+        font-size: 1rem;
+        width: 250px;
+      }
+      .search-input:focus {
+        outline: none;
+        border-color: #17b169;
+      }
+      .search-btn {
+        padding: 0.5rem 1.5rem;
+        background-color: #17b169;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: 500;
+        transition: all 0.3s ease;
+      }
+      .search-btn:hover {
+        background-color: #138f57;
+      }
+      .search-results-header {
+        margin: 2rem 0 1rem;
+      }
+      .no-results {
+        text-align: center;
+        padding: 3rem;
+        color: #666;
+      }
+      .loading {
+        text-align: center;
+        padding: 3rem;
+        font-size: 1.2rem;
+        color: #17b169;
+      }
     </style>
-    <script type="module" crossorigin src="/-Sleep-Outside/assets/listing-BZn2QWq8.js"></script>
+    <script type="module" crossorigin src="/-Sleep-Outside/assets/search-Cfn7pX1Y.js"></script>
     <link rel="modulepreload" crossorigin href="/-Sleep-Outside/assets/style-HlQJNEhF.js">
     <link rel="modulepreload" crossorigin href="/-Sleep-Outside/assets/ProductData-BW6t8Dvz.js">
     <link rel="modulepreload" crossorigin href="/-Sleep-Outside/assets/utils-w_hqdCcP.js">
@@ -38,11 +82,15 @@
         <a href="../index.html"> Sleep<span class="highlight">Outside</span></a>
       </div>
       <nav>
-        <a href="index.html?category=tents">Tents</a>
-        <a href="index.html?category=backpacks">Backpacks</a>
-        <a href="index.html?category=sleeping-bags">Sleeping Bags</a>
-        <a href="index.html?category=hammocks">Hammocks</a>
+        <a href="../product_listing/index.html?category=tents">Tents</a>
+        <a href="../product_listing/index.html?category=backpacks">Backpacks</a>
+        <a href="../product_listing/index.html?category=sleeping-bags">Sleeping Bags</a>
+        <a href="../product_listing/index.html?category=hammocks">Hammocks</a>
       </nav>
+      <div class="search-container">
+        <input type="text" class="search-input" id="searchInput" placeholder="Search products..." />
+        <button class="search-btn" id="searchBtn">Search</button>
+      </div>
       <div class="cart">
         <a href="../cart/index.html">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
@@ -70,7 +118,11 @@
     </header>
     <main class="divider">
       <section class="products">
-        <h2>Top Products: <span class="category-title"></span></h2>
+        <h2 class="search-results-header">Search Results for "<span id="searchTerm"></span>"</h2>
+        <div id="loadingMessage" class="loading">Searching products...</div>
+        <div id="noResults" class="no-results" style="display: none;">
+          <p>No products found. Try a different search term.</p>
+        </div>
         <ul class="product-list">
         </ul>
       </section>

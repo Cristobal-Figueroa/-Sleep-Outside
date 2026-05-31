@@ -22,6 +22,36 @@
         background-color: #17b169;
         color: white;
       }
+      .search-container {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+        margin-left: auto;
+      }
+      .search-input {
+        padding: 0.5rem 1rem;
+        border: 2px solid #ddd;
+        border-radius: 4px;
+        font-size: 1rem;
+        width: 250px;
+      }
+      .search-input:focus {
+        outline: none;
+        border-color: #17b169;
+      }
+      .search-btn {
+        padding: 0.5rem 1.5rem;
+        background-color: #17b169;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: 500;
+        transition: all 0.3s ease;
+      }
+      .search-btn:hover {
+        background-color: #138f57;
+      }
       .category-list {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -59,6 +89,8 @@
         font-size: 1.2rem;
       }
     </style>
+    <script type="module" crossorigin src="/-Sleep-Outside/assets/main-BQXY9_ni.js"></script>
+    <link rel="modulepreload" crossorigin href="/-Sleep-Outside/assets/style-HlQJNEhF.js">
     <link rel="stylesheet" crossorigin href="/-Sleep-Outside/assets/style-C0BBSZZq.css">
   </head>
 
@@ -74,6 +106,10 @@
         <a href="product_listing/index.html?category=sleeping-bags">Sleeping Bags</a>
         <a href="product_listing/index.html?category=hammocks">Hammocks</a>
       </nav>
+      <div class="search-container">
+        <input type="text" class="search-input" placeholder="Search products..." id="searchInput" />
+        <button class="search-btn" id="searchBtn">Search</button>
+      </div>
       <div class="cart">
         <a href="cart/index.html">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
