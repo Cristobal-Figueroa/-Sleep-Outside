@@ -20,6 +20,55 @@ export default class ProductDetails {
     cart.push(this.product);
     setLocalStorage("so-cart", cart);
     updateCartCount();
+    this.showAddToCartModal();
+  }
+
+  showAddToCartModal() {
+    // Create modal HTML
+    const modalHTML = `
+      <div class="modal-overlay" id="cartModal">
+        <div class="modal">
+          <div class="modal-icon">✓</div>
+          <h2 class="modal-title">Added to Cart!</h2>
+          <p class="modal-message">${this.product.NameWithoutBrand} has been added to your cart.</p>
+          <div class="modal-buttons">
+            <button class="modal-btn modal-btn-secondary" id="continueShopping">Continue Shopping</button>
+            <button class="modal-btn modal-btn-primary" id="viewCart">View Cart</button>
+          </div>
+        </div>
+      </div>
+    `;
+
+    // Add modal to page
+    document.body.insertAdjacentHTML('beforeend', modalHTML);
+    
+    // Show modal
+    const modal = document.getElementById('cartModal');
+    setTimeout(() => modal.classList.add('active'), 10);
+
+    // Add event listeners
+    document.getElementById('continueShopping').addEventListener('click', () => {
+      modal.remove();
+    });
+
+    document.getElementById('viewCart').addEventListener('click', () => {
+      window.location.href = '../cart/index.html';
+    });
+
+    // Close on overlay click
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.remove();
+      }
+    });
+
+    // Auto close after 3 seconds
+    setTimeout(() => {
+      if (modal && modal.parentElement) {
+        modal.classList.remove('active');
+        setTimeout(() => modal.remove(), 300);
+      }
+    }, 3000);
   }
 
   renderProductDetails() {
