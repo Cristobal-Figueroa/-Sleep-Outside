@@ -20,4 +20,23 @@ export default class ProductData {
     const data = await convertToJson(response);
     return data.Result;
   }
+
+  async searchProducts(searchTerm) {
+    // Search across all categories
+    const categories = ['tents', 'backpacks', 'sleeping-bags', 'hammocks'];
+    const allProducts = [];
+    
+    for (const category of categories) {
+      const products = await this.getData(category);
+      allProducts.push(...products);
+    }
+    
+    // Filter products by search term
+    const searchLower = searchTerm.toLowerCase();
+    return allProducts.filter(product => 
+      product.Name.toLowerCase().includes(searchLower) ||
+      product.Brand.Name.toLowerCase().includes(searchLower) ||
+      product.NameWithoutBrand.toLowerCase().includes(searchLower)
+    );
+  }
 }
