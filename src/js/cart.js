@@ -41,11 +41,7 @@ function cartItemTemplate(item, index) {
   <p class="cart-card__color">${colorName}</p>
   <p class="cart-card__quantity">qty: 1</p>
   <p class="cart-card__price">$${item.FinalPrice}</p>
-  <button class="remove-item" data-index="${index}" title="Remove item">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-      <path d="M3 6h18M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2M10 11v6M14 11v6"/>
-    </svg>
-  </button>
+  <button class="remove-item" data-index="${index}" title="Remove item">×</button>
 </li>`;
 
   return newItem;
