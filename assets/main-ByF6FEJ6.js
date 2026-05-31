@@ -1,0 +1,1 @@
+import{u as d}from"./utils-BIapS5SB.js";document.addEventListener("DOMContentLoaded",()=>{d();const c=document.getElementById("searchBtn"),t=document.getElementById("searchInput");function n(){const e=t.value.trim();e&&(window.location.href=`search/index.html?q=${encodeURIComponent(e)}`)}c.addEventListener("click",n),t.addEventListener("keypress",e=>{e.key==="Enter"&&n()})});

@@ -1,1 +1,0 @@
-import"./style-HlQJNEhF.js";import{P as o}from"./ProductData-x4V9q2sA.js";import{P as e}from"./ProductList-BQq2D7wW.js";import{a as r}from"./utils-w_hqdCcP.js";const t=r("category"),c=new o,a=document.querySelector(".product-list"),s=new e(t,c,a);s.init();document.querySelector(".category-title").textContent=t.charAt(0).toUpperCase()+t.slice(1);

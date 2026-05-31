@@ -1,1 +1,0 @@
-import"./style-HlQJNEhF.js";document.addEventListener("DOMContentLoaded",()=>{const c=document.getElementById("searchBtn"),n=document.getElementById("searchInput");function t(){const e=n.value.trim();e&&(window.location.href=`search/index.html?q=${encodeURIComponent(e)}`)}c.addEventListener("click",t),n.addEventListener("keypress",e=>{e.key==="Enter"&&t()})});

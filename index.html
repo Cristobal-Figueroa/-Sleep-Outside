@@ -52,6 +52,25 @@
       .search-btn:hover {
         background-color: #138f57;
       }
+      .cart {
+        position: relative;
+      }
+      .cart-count {
+        position: absolute;
+        top: -8px;
+        right: -8px;
+        background-color: #E74C3C;
+        color: white;
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+        border: 2px solid white;
+      }
       .category-list {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -89,9 +108,9 @@
         font-size: 1.2rem;
       }
     </style>
-    <script type="module" crossorigin src="/-Sleep-Outside/assets/main-BQXY9_ni.js"></script>
-    <link rel="modulepreload" crossorigin href="/-Sleep-Outside/assets/style-HlQJNEhF.js">
-    <link rel="stylesheet" crossorigin href="/-Sleep-Outside/assets/style-C0BBSZZq.css">
+    <script type="module" crossorigin src="/-Sleep-Outside/assets/main-ByF6FEJ6.js"></script>
+    <link rel="modulepreload" crossorigin href="/-Sleep-Outside/assets/utils-BIapS5SB.js">
+    <link rel="stylesheet" crossorigin href="/-Sleep-Outside/assets/utils-C0BBSZZq.css">
   </head>
 
   <body>
@@ -111,6 +130,7 @@
         <button class="search-btn" id="searchBtn">Search</button>
       </div>
       <div class="cart">
+        <span class="cart-count">0</span>
         <a href="cart/index.html">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
             <path
